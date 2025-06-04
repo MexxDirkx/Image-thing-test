@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pixel Color Visualizer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-pane">
+            <input type="file" id="imageUpload">
+            <div id="magnifier"><canvas id="magnifierCanvas"></canvas></div>
+            <canvas id="imageCanvas"></canvas>
+            <div id="pixelColor"></div>
+        </div>
+        <div class="right-pane">
+            <canvas id="graphCanvas"></canvas>
+            <div id="labelR" class="axis-label">R</div>
+            <div id="labelG" class="axis-label">G</div>
+            <div id="labelB" class="axis-label">B</div>
+        </div>
+    </div>
+    <div class="controls-section">
+        <div id="fixedTransformations">
+            <h3>Fixed Color Transformations</h3>
+            <button id="rotateRPlus90">R-axis +90°</button>
+            <button id="rotateRMinus90">R-axis -90°</button>
+            <button id="rotateGPlus90">G-axis +90°</button>
+            <button id="rotateGMinus90">G-axis -90°</button>
+            <button id="rotateBPlus90">B-axis +90°</button>
+            <button id="rotateBMinus90">B-axis -90°</button>
+        </div>
+        <button id="dragRotateToggle">Enable Color Drag-Rotate</button>
+        <div id="statusMessages"></div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
